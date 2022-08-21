@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Left side card */
+.wrapper {
+  width: 40%;
+  height: 95%;
+  background-color: #23252c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: min-content;
+  height: 90vh;
+  border-radius: 10px 10px;
+  background-color: #1a1b21;
+  color: #ffffff;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "btns"
+    "main"
+    "footer";
+}
+
+/* Card header */
+.card-header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-img {
+  width: 100%;
+  height: 35vh;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-name {
+  font-size: 1.5rem;
+  margin-top: 0.5em;
+}
+
+.card-title {
+  font-size: 0.75rem;
+  color: #f3bf99;
+  margin-top: 0.3em;
+}
+
+.card-website {
+  font-size: 0.75rem;
+  color: #f5f5f5;
+  text-decoration: none;
+  margin-top: 0.7em;
+}
+
+/* Buttons */
+.btns-wrapper {
+  grid-area: btns;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1.5em 2em;
+}
+
+.btn {
+  padding: 0.3em 2em;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+}
+
+.btn > .icon {
+  width: 15px;
+  margin-right: 0.5em;
+}
+
+.right-side > .btn {
+  width: 100%;
+}
+
+.email-btn {
+  color: #374151;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+.linkedin-btn {
+  color: #ffffff;
+  background-color: #5093e2;
+  border: 0;
+}
+
+/* Card main */
+.card-main {
+  margin: 0 1.5em;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: #f5f5f5;
+}
+
+.section-body {
+  font-size: 0.65rem;
+  color: #dcdcdc;
+  margin: 0.5em 0 2em;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161619;
+  padding: 0.7em 1.5em;
+  border-radius: 0 0 10px 10px;
+}
+
+.link-icon {
+  width: 25px;
+}
+
+.social-link {
+  margin-right: 2em;
+  opacity: 0.7;
+}
+
+.social-link:last-child {
+  margin-right: 0;
+}
+
+.social-link:hover {
+  opacity: 1;
+  filter: brightness(1.9);
+}
+
+/* Dark mood button */
+.material-icons-outlined {
+  font-family: "Material Icons";
+}
+
+.dark-mood-btn {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 3rem;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Dark mood effect */
+.dark-mood .card {
+  background-color: #f5f5f5;
+  color: #2b283a;
+}
+
+.dark-mood .card-title {
+  color: #f47d27;
+}
+
+.dark-mood .card-website,
+.dark-mood .section-body {
+  color: #4a4e74;
+}
+
+.dark-mood .section-title {
+  color: #2b283a;
+}
+
+.dark-mood .footer {
+  background-color: #d5d4d8;
+}
+
+.dark-mood .social-link {
+  opacity: 1;
+}
+
+.dark-mood .social-link:hover {
+  filter: brightness(0);
+}
